@@ -1,0 +1,69 @@
+{
+  "random_split": {
+    "default_xgb_macro_f1": 0.8887402300249109,
+    "tuned_xgb_macro_f1": 0.900111388959919,
+    "tabnet_baseline_macro_f1": 0.7828062466204576,
+    "tabnet_tuned_macro_f1": 0.8230558952204255
+  },
+  "ablation_no_cz_type": {
+    "default_xgb_macro_f1": 0.8737924477114909,
+    "tuned_xgb_macro_f1": 0.8870907761981479,
+    "tabnet_macro_f1": 0.7870861160317112,
+    "delta_default_xgb": -0.014947782313419977,
+    "delta_tuned_xgb": -0.013020612761771133,
+    "delta_tabnet": 0.0042798694112535784
+  },
+  "tabnet_sweep_best": {
+    "n_da": 16,
+    "n_steps": 7,
+    "lr": 0.02,
+    "val_macro_f1": 0.8357936357829573,
+    "test_macro_f1": 0.8230558952204255
+  },
+  "macro_roc_auc": {
+    "default_xgb": 0.9882095619958052,
+    "tuned_xgb": 0.990710322940679,
+    "tabnet_baseline": 0.9760373436159737,
+    "tabnet_tuned": 0.9792035838035744
+  },
+  "nan_coord_policy": {
+    "native_coord_train_pct": 0.6823080925530672,
+    "native_coord_test_pct": 0.6822545022086306,
+    "impute_xgb_on_drop_test": 0.8729247436600609,
+    "drop_xgb_on_drop_test": 0.8729787028477578,
+    "delta_xgb": 5.3959187696905886e-05,
+    "impute_tabnet_on_drop_test": 0.8046659421507518,
+    "drop_tabnet_on_drop_test": 0.7822982280676352,
+    "delta_tabnet": -0.022367714083116663
+  },
+  "cz_type_replacement": {
+    "tuned_xgb_with_cz": 0.900111388959919,
+    "tuned_xgb_no_cz": 0.8870907761981479,
+    "tuned_xgb_no_cz_priors": 0.7588740301993613,
+    "xgb_recovered_pct": -9.84721290346906,
+    "tuned_tabnet_with_cz": 0.8230558952204255,
+    "tuned_tabnet_no_cz": 0.7870861160317112,
+    "tuned_tabnet_no_cz_priors": 0.820552117360515,
+    "tabnet_recovered_pct": 33466001.328803837
+  },
+  "tabnet_refined_tuning": {
+    "best_config": {
+      "n_da": 16,
+      "n_steps": 7,
+      "lr": 0.02,
+      "gamma": 1.0,
+      "batch_size": 1024
+    },
+    "cv_mean_macro_f1": 0.8297761697388619,
+    "cv_std_macro_f1": 0.007590260269287489,
+    "test_macro_f1": 0.8513241863417962,
+    "delta_vs_coarse": 0.028268291121370637,
+    "delta_vs_xgboost": -0.04878720261812286
+  },
+  "temporal_split_2023_to_2024": {
+    "tuned_xgb_macro_f1": 0.7555844424573648,
+    "tabnet_tuned_macro_f1": 0.748748418891186,
+    "delta_tuned_xgb": -0.14452694650255427,
+    "delta_tabnet_tuned": -0.07430747632923951
+  }
+}
