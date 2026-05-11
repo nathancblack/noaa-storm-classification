@@ -1,0 +1,10 @@
+{
+  "xgb_ece": 0.024955813134056867,
+  "tabnet_ece": 0.004347717211617555,
+  "xgb_mean_entropy_correct": 0.19249218702316284,
+  "xgb_mean_entropy_wrong": 0.5216420292854309,
+  "tabnet_mean_entropy_correct": 0.35229241847991943,
+  "tabnet_mean_entropy_wrong": 0.6327449679374695,
+  "n_bins": 10,
+  "note": "ECE = sum_b (|B_b|/N) * |acc(B_b) - conf(B_b)| with 10 equal-width bins on [0,1]. Entropy in nats."
+}

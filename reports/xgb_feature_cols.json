@@ -1,0 +1,10 @@
+[
+  "MONTH",
+  "HOUR",
+  "STATE_ENC",
+  "BEGIN_LAT",
+  "BEGIN_LON",
+  "DURATION_MIN",
+  "CZ_TYPE_ENC",
+  "WFO_ENC"
+]

@@ -206,3 +206,14 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 .claude
+
+# LaTeX build artifacts (paper.tex compiles into these)
+*.aux
+*.bbl
+*.blg
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+reports/paper/*.log
+reports/paper/*.out

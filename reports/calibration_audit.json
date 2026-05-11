@@ -1,0 +1,65 @@
+{
+  "bootstrap_ece": {
+    "B": 500,
+    "seed": 42,
+    "xgb": {
+      "point": 0.02495582504156816,
+      "mean": 0.025156826719454344,
+      "ci": [
+        0.02224568816830984,
+        0.02878323146168964
+      ]
+    },
+    "tabnet": {
+      "point": 0.0043477089053467486,
+      "mean": 0.006047791611984235,
+      "ci": [
+        0.0029405400245581755,
+        0.00942580224743608
+      ]
+    },
+    "diff_xgb_minus_tabnet": {
+      "mean": 0.01910903510747011,
+      "ci": [
+        0.014124072096498864,
+        0.02401534527185145
+      ],
+      "p_diff_positive": 1.0
+    }
+  },
+  "proper_scores": {
+    "xgb": {
+      "brier": 0.1791928047228037,
+      "nll": 0.3122647403821914
+    },
+    "tabnet": {
+      "brier": 0.24772672488564978,
+      "nll": 0.40796796623928855
+    }
+  },
+  "temperature_scaling": {
+    "split_seed": 42,
+    "cal_frac": 0.5,
+    "xgb": {
+      "T": 1.2631262561821337,
+      "pre_ece": 0.02690542038154159,
+      "post_ece": 0.007447433522265663,
+      "pre_brier": 0.1837421583541427,
+      "post_brier": 0.18184622378459006,
+      "pre_nll": 0.32296787710782204,
+      "post_nll": 0.3106296644852236
+    },
+    "tabnet": {
+      "T": 1.0123884356691275,
+      "pre_ece": 0.008420233393541775,
+      "post_ece": 0.009673444934133198,
+      "pre_brier": 0.24810289283683795,
+      "post_brier": 0.24813366137867143,
+      "pre_nll": 0.4105836635853592,
+      "post_nll": 0.4105215072667042
+    },
+    "gap_pre": 0.020608116136221412,
+    "gap_post": -0.002226011411867535
+  },
+  "note": "Bootstrap is on the full test set. Temperature is fit on a 50% calibration half via NLL minimization on softmax(log p / T); the 50% eval half is reported. T>1 softens, T<1 sharpens."
+}

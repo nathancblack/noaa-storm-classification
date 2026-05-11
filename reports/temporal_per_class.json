@@ -1,0 +1,319 @@
+{
+  "random_split": {
+    "xgb": {
+      "Drought": {
+        "precision": 0.9957012358946803,
+        "recall": 0.9973089343379978,
+        "f1-score": 0.996504436676526,
+        "support": 1858.0
+      },
+      "Excessive Heat": {
+        "precision": 0.8784604996623903,
+        "recall": 0.8464541314248536,
+        "f1-score": 0.8621603711066932,
+        "support": 1537.0
+      },
+      "Flash Flood": {
+        "precision": 0.8795399515738499,
+        "recall": 0.8768859384429692,
+        "f1-score": 0.8782109398609852,
+        "support": 1657.0
+      },
+      "Flood": {
+        "precision": 0.8705179282868526,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8452611218568665,
+        "support": 1064.0
+      },
+      "Hail": {
+        "precision": 0.7865429234338747,
+        "recall": 0.7369565217391304,
+        "f1-score": 0.7609427609427609,
+        "support": 4140.0
+      },
+      "Heat": {
+        "precision": 0.8284023668639053,
+        "recall": 0.8622016936104696,
+        "f1-score": 0.8449641644662391,
+        "support": 1299.0
+      },
+      "High Wind": {
+        "precision": 0.9730094466936572,
+        "recall": 0.9632598530394122,
+        "f1-score": 0.9681101040617657,
+        "support": 1497.0
+      },
+      "Marine Thunderstorm Wind": {
+        "precision": 0.9989669421487604,
+        "recall": 1.0,
+        "f1-score": 0.999483204134367,
+        "support": 967.0
+      },
+      "Thunderstorm Wind": {
+        "precision": 0.8629992992291521,
+        "recall": 0.8972677595628415,
+        "f1-score": 0.8797999642793356,
+        "support": 8235.0
+      },
+      "Winter Weather": {
+        "precision": 0.9608595548733692,
+        "recall": 0.9705426356589147,
+        "f1-score": 0.9656768222136521,
+        "support": 1290.0
+      },
+      "accuracy": 0.8792898402990146,
+      "macro avg": {
+        "precision": 0.9035000148660493,
+        "recall": 0.8972306039245159,
+        "f1-score": 0.900111388959919,
+        "support": 23544.0
+      },
+      "weighted avg": {
+        "precision": 0.8785729726043965,
+        "recall": 0.8792898402990146,
+        "f1-score": 0.8785995355657638,
+        "support": 23544.0
+      }
+    },
+    "tabnet": {
+      "Drought": {
+        "precision": 0.9973002159827213,
+        "recall": 0.9940796555435952,
+        "f1-score": 0.9956873315363881,
+        "support": 1858.0
+      },
+      "Excessive Heat": {
+        "precision": 0.9309417040358744,
+        "recall": 0.675341574495771,
+        "f1-score": 0.7828054298642534,
+        "support": 1537.0
+      },
+      "Flash Flood": {
+        "precision": 0.8408239700374532,
+        "recall": 0.8129149064574532,
+        "f1-score": 0.8266339367904265,
+        "support": 1657.0
+      },
+      "Flood": {
+        "precision": 0.8128179043743642,
+        "recall": 0.7509398496240601,
+        "f1-score": 0.7806546165119688,
+        "support": 1064.0
+      },
+      "Hail": {
+        "precision": 0.667093142272262,
+        "recall": 0.6297101449275362,
+        "f1-score": 0.6478628230616302,
+        "support": 4140.0
+      },
+      "Heat": {
+        "precision": 0.7107390300230947,
+        "recall": 0.947652040030793,
+        "f1-score": 0.8122731771692511,
+        "support": 1299.0
+      },
+      "High Wind": {
+        "precision": 0.9221122112211221,
+        "recall": 0.9331997327989312,
+        "f1-score": 0.9276228419654714,
+        "support": 1497.0
+      },
+      "Marine Thunderstorm Wind": {
+        "precision": 0.9969072164948454,
+        "recall": 1.0,
+        "f1-score": 0.9984512132163139,
+        "support": 967.0
+      },
+      "Thunderstorm Wind": {
+        "precision": 0.8042998256827426,
+        "recall": 0.8404371584699454,
+        "f1-score": 0.8219714964370546,
+        "support": 8235.0
+      },
+      "Winter Weather": {
+        "precision": 0.9294770206022187,
+        "recall": 0.9093023255813953,
+        "f1-score": 0.9192789968652038,
+        "support": 1290.0
+      },
+      "accuracy": 0.8208885490995583,
+      "macro avg": {
+        "precision": 0.86125122407267,
+        "recall": 0.8493577387929481,
+        "f1-score": 0.8513241863417962,
+        "support": 23544.0
+      },
+      "weighted avg": {
+        "precision": 0.8237251978268505,
+        "recall": 0.8208885490995583,
+        "f1-score": 0.8197316426377076,
+        "support": 23544.0
+      }
+    }
+  },
+  "class_labels": [
+    "Drought",
+    "Excessive Heat",
+    "Flash Flood",
+    "Flood",
+    "Hail",
+    "Heat",
+    "High Wind",
+    "Marine Thunderstorm Wind",
+    "Thunderstorm Wind",
+    "Winter Weather"
+  ],
+  "note": "classification_report output_dict=True. Macro-F1 is under \"macro avg\" / \"f1-score\".",
+  "temporal_split": {
+    "xgb": {
+      "Drought": {
+        "precision": 0.9737742303306728,
+        "recall": 0.9835876763604953,
+        "f1-score": 0.9786563529580289,
+        "support": 3473.0
+      },
+      "Excessive Heat": {
+        "precision": 0.536648369389732,
+        "recall": 0.6248120300751879,
+        "f1-score": 0.5773840541948931,
+        "support": 2660.0
+      },
+      "Flash Flood": {
+        "precision": 0.8405365126676602,
+        "recall": 0.7260244582707573,
+        "f1-score": 0.7790951997237251,
+        "support": 4661.0
+      },
+      "Flood": {
+        "precision": 0.6679035250463822,
+        "recall": 0.7281553398058253,
+        "f1-score": 0.6967292432746275,
+        "support": 2472.0
+      },
+      "Hail": {
+        "precision": 0.5109978287548381,
+        "recall": 0.6054132647354882,
+        "f1-score": 0.5542131667861165,
+        "support": 8941.0
+      },
+      "Heat": {
+        "precision": 0.6311773255813954,
+        "recall": 0.5477767265846736,
+        "f1-score": 0.5865270977545163,
+        "support": 3171.0
+      },
+      "High Wind": {
+        "precision": 0.8256410256410256,
+        "recall": 0.7658988482724086,
+        "f1-score": 0.7946486556695674,
+        "support": 3994.0
+      },
+      "Marine Thunderstorm Wind": {
+        "precision": 0.9931880108991825,
+        "recall": 0.9977189781021898,
+        "f1-score": 0.9954483386436049,
+        "support": 2192.0
+      },
+      "Thunderstorm Wind": {
+        "precision": 0.7848128342245989,
+        "recall": 0.7360080240722167,
+        "f1-score": 0.7596273291925466,
+        "support": 19940.0
+      },
+      "Winter Weather": {
+        "precision": 0.8086174993391488,
+        "recall": 0.8599943772842282,
+        "f1-score": 0.8335149863760218,
+        "support": 3557.0
+      },
+      "accuracy": 0.7336045476834783,
+      "macro avg": {
+        "precision": 0.7573297161874637,
+        "recall": 0.757538972356347,
+        "f1-score": 0.7555844424573648,
+        "support": 55061.0
+      },
+      "weighted avg": {
+        "precision": 0.743695072486487,
+        "recall": 0.7336045476834783,
+        "f1-score": 0.7368395253295976,
+        "support": 55061.0
+      }
+    },
+    "tabnet": {
+      "Drought": {
+        "precision": 0.9779994133176885,
+        "recall": 0.9599769651598042,
+        "f1-score": 0.968904388259227,
+        "support": 3473.0
+      },
+      "Excessive Heat": {
+        "precision": 0.5701787751996957,
+        "recall": 0.5635338345864662,
+        "f1-score": 0.5668368311590093,
+        "support": 2660.0
+      },
+      "Flash Flood": {
+        "precision": 0.8132903545747583,
+        "recall": 0.7037116498605449,
+        "f1-score": 0.7545433632390154,
+        "support": 4661.0
+      },
+      "Flood": {
+        "precision": 0.6369890732496964,
+        "recall": 0.6367313915857605,
+        "f1-score": 0.6368602063524176,
+        "support": 2472.0
+      },
+      "Hail": {
+        "precision": 0.5459715639810426,
+        "recall": 0.6442232412481825,
+        "f1-score": 0.5910420193935663,
+        "support": 8941.0
+      },
+      "Heat": {
+        "precision": 0.6291507493388186,
+        "recall": 0.6751813308104699,
+        "f1-score": 0.6513538180711895,
+        "support": 3171.0
+      },
+      "High Wind": {
+        "precision": 0.8321635642355814,
+        "recall": 0.6827741612418627,
+        "f1-score": 0.7501031494980058,
+        "support": 3994.0
+      },
+      "Marine Thunderstorm Wind": {
+        "precision": 0.9900226757369615,
+        "recall": 0.9958941605839416,
+        "f1-score": 0.9929497384580396,
+        "support": 2192.0
+      },
+      "Thunderstorm Wind": {
+        "precision": 0.796574440052701,
+        "recall": 0.7580240722166499,
+        "f1-score": 0.77682127714249,
+        "support": 19940.0
+      },
+      "Winter Weather": {
+        "precision": 0.7444633730834753,
+        "recall": 0.8599943772842282,
+        "f1-score": 0.798069397338899,
+        "support": 3557.0
+      },
+      "accuracy": 0.738671655073464,
+      "macro avg": {
+        "precision": 0.7536803982770419,
+        "recall": 0.748004518457791,
+        "f1-score": 0.748748418891186,
+        "support": 55061.0
+      },
+      "weighted avg": {
+        "precision": 0.7479116098403357,
+        "recall": 0.738671655073464,
+        "f1-score": 0.7412686389335443,
+        "support": 55061.0
+      }
+    }
+  }
+}

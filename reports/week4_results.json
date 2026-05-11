@@ -44,7 +44,8 @@
     "tuned_tabnet_with_cz": 0.8230558952204255,
     "tuned_tabnet_no_cz": 0.7870861160317112,
     "tuned_tabnet_no_cz_priors": 0.820552117360515,
-    "tabnet_recovered_pct": 33466001.328803837
+    "tabnet_recovered_pct": 0.9303921815373255,
+    "note": "recovered_pct = (no_cz_priors - no_cz) / (with_cz - no_cz). Negative values mean the priors hurt the model relative to simply dropping CZ_TYPE; null means the with_cz/no_cz gap was too small (<1e-3) for the ratio to be meaningful."
   },
   "tabnet_refined_tuning": {
     "best_config": {
@@ -65,5 +66,170 @@
     "tabnet_tuned_macro_f1": 0.748748418891186,
     "delta_tuned_xgb": -0.14452694650255427,
     "delta_tabnet_tuned": -0.07430747632923951
+  },
+  "statistical_tests": {
+    "bootstrap": {
+      "n_resamples": 1000,
+      "seed": 42,
+      "xgb_point": 0.900111388959919,
+      "tabnet_point": 0.8513241863417962,
+      "xgb_ci": [
+        0.8958266562018751,
+        0.9041014570985993
+      ],
+      "tabnet_ci": [
+        0.8462857037166804,
+        0.8559985553248664
+      ],
+      "diff_mean": 0.04889804142994131,
+      "diff_ci": [
+        0.04440895664010175,
+        0.05359496059140507
+      ],
+      "p_two_sided": 0.0
+    },
+    "mcnemar": {
+      "table": {
+        "xgb_correct_tn_correct": 18419,
+        "xgb_correct_tn_wrong": 2283,
+        "xgb_wrong_tn_correct": 908,
+        "xgb_wrong_tn_wrong": 1934
+      },
+      "chi2": 591.6251958633657,
+      "p": 1.1102141998330618e-130,
+      "correction": true,
+      "exact": false
+    },
+    "note": "Bootstrap uses paired resampling (same indices for both models per resample). McNemar uses per-row correctness vs ground truth."
+  },
+  "uncertainty": {
+    "xgb_ece": 0.024955813134056867,
+    "tabnet_ece": 0.004347717211617555,
+    "xgb_mean_entropy_correct": 0.19249218702316284,
+    "xgb_mean_entropy_wrong": 0.5216420292854309,
+    "tabnet_mean_entropy_correct": 0.35229241847991943,
+    "tabnet_mean_entropy_wrong": 0.6327449679374695,
+    "n_bins": 10,
+    "note": "ECE = sum_b (|B_b|/N) * |acc(B_b) - conf(B_b)| with 10 equal-width bins on [0,1]. Entropy in nats."
+  },
+  "tabnet_diagnostics": {
+    "roc_auc_ovr_per_class": {
+      "Drought": 0.999972302598185,
+      "Excessive Heat": 0.9928372290841746,
+      "Flash Flood": 0.9851021289219696,
+      "Flood": 0.9898101779693896,
+      "Hail": 0.9272048407270975,
+      "Heat": 0.9917094447013982,
+      "High Wind": 0.99733542772335,
+      "Marine Thunderstorm Wind": 1.0,
+      "Thunderstorm Wind": 0.949118726982707,
+      "Winter Weather": 0.9979754706583539
+    },
+    "roc_auc_ovr_macro": 0.9831065749366624,
+    "top_attended_features": [
+      "CZ_TYPE_ENC",
+      "DURATION_MIN",
+      "HOUR",
+      "BEGIN_LAT",
+      "BEGIN_LON",
+      "MONTH",
+      "STATE_ENC",
+      "WFO_ENC"
+    ],
+    "n_decision_steps": 7
+  },
+  "error_overlap": {
+    "n_test": 23544,
+    "table": {
+      "xgb_correct_tn_correct": 18419,
+      "xgb_correct_tn_wrong": 2283,
+      "xgb_wrong_tn_correct": 908,
+      "xgb_wrong_tn_wrong": 1934
+    },
+    "agreement_rate": 0.8644665307509344,
+    "cohen_kappa": 0.4717701200022488,
+    "per_class": [
+      {
+        "class": "Drought",
+        "n": 1858,
+        "both_correct": 1846,
+        "xgb_only": 7,
+        "tabnet_only": 1,
+        "both_wrong": 4
+      },
+      {
+        "class": "Excessive Heat",
+        "n": 1537,
+        "both_correct": 1026,
+        "xgb_only": 275,
+        "tabnet_only": 12,
+        "both_wrong": 224
+      },
+      {
+        "class": "Flash Flood",
+        "n": 1657,
+        "both_correct": 1287,
+        "xgb_only": 166,
+        "tabnet_only": 60,
+        "both_wrong": 144
+      },
+      {
+        "class": "Flood",
+        "n": 1064,
+        "both_correct": 761,
+        "xgb_only": 113,
+        "tabnet_only": 38,
+        "both_wrong": 152
+      },
+      {
+        "class": "Hail",
+        "n": 4140,
+        "both_correct": 2308,
+        "xgb_only": 743,
+        "tabnet_only": 299,
+        "both_wrong": 790
+      },
+      {
+        "class": "Heat",
+        "n": 1299,
+        "both_correct": 1091,
+        "xgb_only": 29,
+        "tabnet_only": 140,
+        "both_wrong": 39
+      },
+      {
+        "class": "High Wind",
+        "n": 1497,
+        "both_correct": 1376,
+        "xgb_only": 66,
+        "tabnet_only": 21,
+        "both_wrong": 34
+      },
+      {
+        "class": "Marine Thunderstorm Wind",
+        "n": 967,
+        "both_correct": 967,
+        "xgb_only": 0,
+        "tabnet_only": 0,
+        "both_wrong": 0
+      },
+      {
+        "class": "Thunderstorm Wind",
+        "n": 8235,
+        "both_correct": 6594,
+        "xgb_only": 795,
+        "tabnet_only": 327,
+        "both_wrong": 519
+      },
+      {
+        "class": "Winter Weather",
+        "n": 1290,
+        "both_correct": 1163,
+        "xgb_only": 89,
+        "tabnet_only": 10,
+        "both_wrong": 28
+      }
+    ],
+    "note": "Agreement rate = (both correct + both wrong) / N. Kappa is on per-row correctness vectors. High kappa => correlated errors (shared signal limits); low kappa => independent errors (ensemble may help)."
   }
 }

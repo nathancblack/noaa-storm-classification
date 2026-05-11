@@ -1,0 +1,35 @@
+{
+  "bootstrap": {
+    "n_resamples": 1000,
+    "seed": 42,
+    "xgb_point": 0.900111388959919,
+    "tabnet_point": 0.8513241863417962,
+    "xgb_ci": [
+      0.8958266562018751,
+      0.9041014570985993
+    ],
+    "tabnet_ci": [
+      0.8462857037166804,
+      0.8559985553248664
+    ],
+    "diff_mean": 0.04889804142994131,
+    "diff_ci": [
+      0.04440895664010175,
+      0.05359496059140507
+    ],
+    "p_two_sided": 0.0
+  },
+  "mcnemar": {
+    "table": {
+      "xgb_correct_tn_correct": 18419,
+      "xgb_correct_tn_wrong": 2283,
+      "xgb_wrong_tn_correct": 908,
+      "xgb_wrong_tn_wrong": 1934
+    },
+    "chi2": 591.6251958633657,
+    "p": 1.1102141998330618e-130,
+    "correction": true,
+    "exact": false
+  },
+  "note": "Bootstrap uses paired resampling (same indices for both models per resample). McNemar uses per-row correctness vs ground truth."
+}
