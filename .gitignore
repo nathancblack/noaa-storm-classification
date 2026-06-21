@@ -217,3 +217,5 @@ __marimo__/
 *.synctex.gz
 reports/paper/*.log
 reports/paper/*.out
+
+presentation
